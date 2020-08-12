@@ -81,48 +81,48 @@ body {
 
 /*social media*/
 #social-test {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    font-size: 10px;
-  }
-  
-  #social-test .social {
-    padding-left: 0px;
-  }
-  
-  #social-test li {
-    display: inline-block;
-  }
-  
-  #social-test li a {
-    color: #373737;
-    border-radius: 6px;
-    list-style-type: none;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    padding: 1%;
-    border: 1px #373737;
-    cursor: pointer;
-    margin-left: 10px;
-    margin-bottom: 20px;
-    transition: ease 0.3s;
-  }
-  
-  #social-test li a:hover {
-    color: #000000;
-    border: 1px #000000;
-  }
-  
-  .social:hover > li {
-    opacity: 0.5;
-  }
-  
-  .social:hover > li:hover {
-    opacity: 1;
-  }
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30px;
+}
+
+#social-test .social {
+  padding-left: 0px;
+}
+
+#social-test li {
+  display: inline-block;
+}
+
+#social-test li a {
+  color: rgba(255, 255, 255, 0.6);
+  border-radius: 6px;
+  list-style-type: none;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  padding: 1%;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  transition: ease 0.3s;
+}
+
+#social-test li a:hover {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.social:hover > li {
+  opacity: 0.5;
+}
+
+.social:hover > li:hover {
+  opacity: 1;
+}
 
 /*logo animation*/
 

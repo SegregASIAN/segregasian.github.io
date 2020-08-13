@@ -30,17 +30,25 @@
         <a href="index.html"><img src="images/segregasian-logo-insignia.svg" class="nav-logo" alt="Segregasian"></img></a>
           <ul class="navbar-nav m-auto">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item active"><a class="nav-link active" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
             <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
-            <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+            <li class="nav-item active"><a class="nav-link active" href="shop.html">Shop</a></li>
         </ul>
       </div>
     </nav>
     <!--nav bar end-->
 
     <div class="content">
+      <!--logo start-->
+      <div style="position: relative; left: 0; top: 0;">
+        <img src="images/segregasian-logo-insignia.svg" class="logo-insignia"/>
+        <img src="images/segregasian-logo-ring.svg" class="logo-ring"/>
+        
+      </div>
+      <!--logo end-->
+
       <!--information section start-->
       <section class="main-links">
         <div class="col text-center px-4">
@@ -51,11 +59,51 @@
 
       <br>
 
-
       <!--information section end-->
 
-      <!--section-->
-
+      <!--paypal section-->
+      <div id="paypal-button"></div>
+      <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+      <script>
+        paypal.Button.render({
+          // Configure environment
+          env: 'sandbox',
+          client: {
+            sandbox: 'demo_sandbox_client_id',
+            production: 'demo_production_client_id'
+          },
+          // Customize button (optional)
+          locale: 'en_US',
+          style: {
+            size: 'small',
+            color: 'gold',
+            shape: 'pill',
+          },
+      
+          // Enable Pay Now checkout flow (optional)
+          commit: true,
+      
+          // Set up a payment
+          payment: function(data, actions) {
+            return actions.payment.create({
+              transactions: [{
+                amount: {
+                  total: '0.01',
+                  currency: 'USD'
+                }
+              }]
+            });
+          },
+          // Execute the payment
+          onAuthorize: function(data, actions) {
+            return actions.payment.execute().then(function() {
+              // Show a confirmation message to the buyer
+              window.alert('Thank you for your purchase!');
+            });
+          }
+        }, '#paypal-button');
+      
+      </script>
       <!--section-->
 
     </div>

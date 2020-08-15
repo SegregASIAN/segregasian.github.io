@@ -1,8 +1,118 @@
-/*!
- * Start Bootstrap - Blog Post (https://startbootstrap.com/templates/blog-post)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-blog-post/blob/master/LICENSE)
- */
+/* Main */
 body {
   padding-top: 56px;
+}
+
+/* Nav logo */
+.nav-logo-main {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin: auto;
+}
+
+.nav-logo-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  text-align: center;
+  height: 50px;
+  /* Animation */
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+
+.nav-logo-ring:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.nav-logo-insignia {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  text-align: center;
+  height: 50px;
+}
+
+/* Social media */
+#social-test {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 25px;
+}
+
+#social-test .social {
+  padding-left: 0px;
+}
+
+#social-test li {
+  display: inline-block;
+}
+
+#social-test li a {
+  color: #ffffffab;
+  border-radius: 6px;
+  list-style-type: none;
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  padding: 1%;
+  border: 1px solid #ffffffab;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  transition: ease 0.3s;
+}
+
+#social-test li a:hover {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.social:hover > li {
+  opacity: 0.5;
+}
+
+.social:hover > li:hover {
+  opacity: 1;
+}
+
+/* Footer */
+footer {
+  background:#373737;
+}
+
+footer h6 {
+  font-size:80%
+}
+
+footer .subtext{
+  margin-bottom: 8px;
+  font-size:75%;
+  color:#ffffff;
+}
+
+footer .subtext a {
+  color:#ffffff;
+}
+
+.container.w-75 {
+  color: #000000;
+}
+
+.footer-org {
+  color: #FFFFFF;
+}
+
+.footer-subheading {
+  color: #ffffffab;
 }
